@@ -8,6 +8,7 @@ var passport = require('passport');
 const methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
+var propsRouter = require('./routes/props');
 var usersRouter = require('./routes/users');
 require('dotenv').config();
 require('./config/database');
@@ -41,6 +42,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/props', propsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
