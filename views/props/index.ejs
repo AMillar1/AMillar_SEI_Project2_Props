@@ -1,6 +1,11 @@
 <%- include('../partials/header') %> 
-<% props.forEach(function (p) { %>
-<%= p.title %>
+
+<div class="card-body">
+    <% props.forEach(function (p) { %>
+        <h4 class="card-title"><%= p.title %></h4>
+        <div class="card-subtitle text-muted mb-2">
 <% }); %>
+</div>
+</div>
 
 <%- include('../partials/footer') %>
