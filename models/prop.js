@@ -6,6 +6,15 @@ const propSchema = new Schema({
         type: String, 
         required: true
     },
-})
+    dependencies: {
+        type: String,
+        required: true
+    },
+    user: {
+        type: Schema.Types.ObjectId, 
+        ref: 'User'},
+    }, {
+    timestamps: true
+});
 
 module.exports = mongoose.model('Prop', propSchema);

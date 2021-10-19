@@ -1,11 +1,18 @@
 <%- include('../partials/header') %> 
 
-<div class="card-body">
-    <% props.forEach(function (p) { %>
+<% props.forEach(function (p) { %>
+    <div class="card">
+    <div class="card-body">
         <h4 class="card-title"><%= p.title %></h4>
         <div class="card-subtitle text-muted mb-2">
+        <div><%= p.dependencies %></div>
+        <a href="props/<%= p.id %>" class="btn btn-primary">Details</a>
+        <a href="props/edit/<%= p.id %>" class="btn btn-info">Edit</a>
+        <form action="/props/<%=p.id %>?_method=DELETE" method="POST" class="d-inline">
+        <button type="submit" class="btn btn-danger">Delete</button>
+    </div>
+</div>
+</div>
 <% }); %>
-</div>
-</div>
 
 <%- include('../partials/footer') %>
