@@ -10,5 +10,8 @@ router.get('/', propsCtrl.index);
 router.get('/new', propsCtrl.new);
 router.post('/', propsCtrl.create);
 router.get('/:id', propsCtrl.show);
+router.delete('/:id', propsCtrl.delete);
+router.get('/:id/edit', propsCtrl.edit);
+router.put('/:id', propsCtrl.update);
 
 module.exports = router;
