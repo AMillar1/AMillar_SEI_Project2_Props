@@ -30,7 +30,7 @@ router.get(
 
 router.get('/logout', function(req, res) {
   req.logout();
-  res.redirect('/movies');
+  res.redirect('/props');
 });
 
 module.exports = router;
