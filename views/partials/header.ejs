@@ -10,8 +10,12 @@
 <body>
   <nav>
     <a href="/">HOME</a>
-    <a href="/props/new">New Prop</a>
-    
+    <% if (user) { %>
+      <a href="/props/new">New Prop</a>
+      <a href="/logout">LOG OUT</a>
+    <% } else { %>
+      <a href="/auth/google" class="login">LOG IN&nbsp;</a>
+    <% } %>
   </nav>
   <main>
     <h1><%= title %></h1>
