@@ -2,4 +2,20 @@
 <div><%= prop.title %></div>
 <div><%= prop.contents %></div>
 <div><%= prop.dependencies %></div>
+<a href="/props/<%= prop.id %>" class="btn btn-primary">Details</a>
+        <a href="/props/<%= prop.id %>/edit" class="btn btn-info">Edit</a>
+        <form action="/props/<%=prop.id %>?_method=DELETE" method="POST" class="d-inline">
+        <button type="submit" class="btn btn-danger">Delete</button></form>
+        <!-- iterate over comments. If empty prompt with 'add comment' render all the comments from this prop.  -->
+    <form action="/props/<%=prop.id%>/comments" method="POST">
+        <input name="content"> 
+        <button type="submit">Comment</button>
+    </form>
+<% if (prop.comments.length) { %>
+    <% prop.comments.forEach(function (c) { %>
+        <div><%= c.content %></div>
+   <% }) %>
+<% } else { %>
+    <h2>Add a comment</h2>
+<% } %>
 <%- include('../partials/footer') %>

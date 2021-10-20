@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+const commentSchema = new Schema({
+    content: String,
+})
+
 const propSchema = new Schema({
     title: {
         type: String, 
@@ -16,9 +20,11 @@ const propSchema = new Schema({
     },
     user: {
         type: Schema.Types.ObjectId, 
-        ref: 'User'},
-    }, {
-    timestamps: true
+        ref: 'User'
+    },
+    comments: [commentSchema]
+}, {
+    timestamps: true    
 });
 
 module.exports = mongoose.model('Prop', propSchema);

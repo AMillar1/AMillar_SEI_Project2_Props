@@ -9,10 +9,11 @@ const methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var propsRouter = require('./routes/props');
-var usersRouter = require('./routes/users');
+var commentsRouter = require('./routes/comments');
 require('dotenv').config();
 require('./config/database');
 require('./config/passport');
+
 
 var app = express();
 
@@ -39,10 +40,13 @@ app.use(function(req, res, next) {
 });
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
+const isLoggedIn = require('./config/auth')
+
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/props', propsRouter);
+app.use('/', commentsRouter);
+app.use('/props', isLoggedIn, propsRouter); //now requiring login for ANY propsRouter route. 
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

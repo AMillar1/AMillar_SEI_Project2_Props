@@ -11,7 +11,7 @@ module.exports = {
 }
 
 function index(req, res) {
-    Prop.find({}, function (err, props) {
+    Prop.find({user: req.user._id}, function (err, props) {
         res.render('props/index', { title: 'All Props', props });
     });
 }
@@ -28,6 +28,7 @@ function newProp(req, res) {
 }
 
 function create(req, res) {
+    req.body.user = req.user._id;
     const prop = new Prop(req.body);
     prop.save(function(err){
         console.log(err); //null means it worked! 
@@ -36,10 +37,10 @@ function create(req, res) {
 }
 
 function deleteProp(req, res) {
-        Prop.findByIdAndDelete(req.params.id, function (err) {
-            res.redirect('/props') ;
-        });
-    }
+    Prop.findOneAndDelete({_id: req.params.id, user: req.user._id}, function (err) {
+        res.redirect('/props') ;
+    });
+}
 
 function edit(req, res) {
     Prop.findById(req.params.id, function (err, prop) {
@@ -48,7 +49,7 @@ function edit(req, res) {
 }
 
 function update(req, res) {
-    Prop.findByIdAndUpdate(req.params.id, req.body, function(err, prop) {
+    Prop.findOneAndUpdate({_id: req.params.id, user: req.user._id}, req.body, function(err, prop) {
         res.redirect('/props');
-    })
+    });
 }
