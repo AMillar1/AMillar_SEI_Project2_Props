@@ -6,6 +6,7 @@
         <h4 class="card-title"><%= p.title %></h4>
         <div class="card-subtitle text-muted mb-2">
         <div><%= p.dependencies %></div>
+        <div><%= p.contents %></div>
         <a href="/props/<%= p.id %>" class="btn btn-primary">Details</a>
         <a href="/props/<%= p.id %>/edit" class="btn btn-info">Edit</a>
         <form action="/props/<%=p.id %>?_method=DELETE" method="POST" class="d-inline">

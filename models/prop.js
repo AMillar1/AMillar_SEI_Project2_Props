@@ -6,6 +6,10 @@ const propSchema = new Schema({
         type: String, 
         required: true
     },
+    contents: {
+        type: String,
+        required: true
+    },
     dependencies: {
         type: String,
         required: true
