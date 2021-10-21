@@ -51,3 +51,12 @@ nav > a.active {
 nav {
   margin-bottom: 2rem;
 }
+
+.comment-form {
+  margin: 3vmin auto;
+}
+
+.comment-btn {
+  display: flex;
+  justify-content: space-between;
+}
