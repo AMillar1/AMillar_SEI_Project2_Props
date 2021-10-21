@@ -9,9 +9,9 @@
 </head>
 <body>
   <nav>
-    <a href="/">HOME</a>
+    <a href="/" <%- (title === 'All Props') ? 'class="active"' : '' %>>HOME</a>
     <% if (user) { %>
-      <a href="/props/new">New Prop</a>
+      <a href="/props/new" <%- (title === 'New Prop') ? 'class="active"' : '' %>>NEW PROP</a>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
       <a href="/auth/google" class="login">LOG IN&nbsp;</a>

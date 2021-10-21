@@ -1,8 +1,11 @@
 <%- include('../partials/header') %> 
-<form method="POST" action="/props/<%= prop._id %>?_method=PUT">
-    <label>Title:<input name="title" value="<%= prop.title %>"></label>
-    <label>Dependencies: <input name="dependencies" value="<%= prop.dependencies %>"></label>
-    <label>Contents: <input name="contents" value="<%= prop.contents %>"></label>
+<form class="form" method="POST" action="/props/<%= prop._id %>?_method=PUT">
+    <label>Title:</label>
+    <input name="title" value="<%= prop.title %>">
+    <label>Dependencies:</label>
+    <input name="dependencies" value="<%= prop.dependencies %>">
+    <label>Contents:</label>
+    <input name="contents" value="<%= prop.contents %>">
       <button type="submit" class="btn btn-primary">Save</button>
 </form>
 <%- include('../partials/footer') %>

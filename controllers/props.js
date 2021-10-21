@@ -18,7 +18,7 @@ function index(req, res) {
 
 function show(req, res) {
     Prop.findById(req.params.id, function (err, prop){
-        res.render('props/show', { title: 'Prop Detail', prop }) ;
+        res.render('props/show', { title: `${prop.title}`, prop }) ;
     });
 }
     // if (prop === null) res.redirect('/');

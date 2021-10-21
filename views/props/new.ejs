@@ -1,8 +1,11 @@
 <%- include('../partials/header') %> 
-<form method="POST" action="/props">
-    <label>Title:<input name="title"></label>
-    <label>Dependencies: <input name="dependencies"></label>
-    <label>Contents: <input name="contents"></label>
+<form class="form" method="POST" action="/props">
+    <label>Title:</label>
+    <input name="title">
+    <label>Dependencies:</label>
+    <input name="dependencies">
+    <label>Contents:</label>
+    <input name="contents">
       <button type="submit" class="btn btn-primary">Save</button>
 </form>
 <%- include('../partials/footer') %>
