@@ -4,8 +4,8 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.redirect('/props');
-  // res.render('index', { title: 'Props' });
+  // res.redirect('/props');
+  res.render('index', { title: 'Welcome' }); 
 });
 
 router.get(

@@ -1,7 +1,7 @@
 <%- include('../partials/header') %> 
-<div><%= prop.contents %></div>
-<div><%= prop.dependencies %></div>
-<a href="/props/<%= prop.id %>" class="btn btn-primary">Details</a>
+<div>Dependencies: <%= prop.dependencies %></div>
+<div class="form"><%= prop.contents %></div>
+<!-- <a href="/props/<%= prop.id %>" class="btn btn-primary">Details</a> -->
         <a href="/props/<%= prop.id %>/edit" class="btn btn-info">Edit</a>
         <form action="/props/<%=prop.id %>?_method=DELETE" method="POST" class="d-inline">
         <button type="submit" class="btn btn-danger">Delete</button></form>
