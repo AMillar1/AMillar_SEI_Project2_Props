@@ -11,12 +11,12 @@ This app is a way to record and organize propositions from a geometry class. I o
 
 <!-- **Click [here](https://amillar1.github.io/AMillar_SEI_Project1_Minesweeper/) to play!** -->
 
-![Alt text](https://i.imgur.com/2ZpgkAH.png)
+![Alt text](https://i.imgur.com/cpxLcWg.png)
 
 And we can add tools to our toolbox! However, we can't do so without listing some dependencies! 
 
-![Alt text](https://i.imgur.com/cpxLcWg.png)
 
+![Alt text](https://i.imgur.com/2ZpgkAH.png)
 
 ![Alt text](https://i.imgur.com/4AEsePX.png)
 
