@@ -7,7 +7,10 @@ We still learn geometry because it teaches us how to _think carefully and clearl
 
 ## Getting Started
 
-This app is a way to record and organize propositions from a geometry class. I often like to treat geometry like creating a toolbox. Once a theorem is established you can use it in later proofs. The app lets us see all of the tools in our toolbox. 
+This app is a way to record and organize propositions from a geometry class. I often like to treat geometry like creating a toolbox. Once a theorem is established you can use it in later proofs. The app lets us see all of the tools in our toolbox.
+
+You can try the deployed app for yourself [here](https://my-first-euclid.herokuapp.com/)
+[Project Planning](https://trello.com/b/FaaPzmFR/project-2)
 
 ![Alt text](https://i.imgur.com/2ZpgkAH.png) <!-- all props page-->
 
